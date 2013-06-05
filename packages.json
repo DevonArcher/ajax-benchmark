@@ -1,0 +1,12 @@
+{
+    "name": "ajax_benchmarks",
+    "description": "Speed benchmarks of Dojo and jQuery's Ajax implementations",
+    "author": "Mickael van der Beek (https://github.com/Mickael-van-der-Beek)",
+    "dependencies": {
+        "express": "latest"
+    },
+    "version": "1.0",
+    "engines": {
+        "node": "latest"
+    }
+}
