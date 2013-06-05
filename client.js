@@ -3,7 +3,7 @@ require([
 	'dojo/_base/kernel',
 ], function(xhr, kernel) {
 
-	var totalRequests = 10;
+	var totalRequests = 500;
 
 	function jqueryXhr(counter, jqueryTime, callback) {
 		if(counter >= totalRequests) {
@@ -43,13 +43,13 @@ require([
 									+ kernel.version.minor + '.'
 									+ kernel.version.patch;
 
+		var jqueryVersionSpan = document.getElementById('jqueryVersion');
+		jqueryVersionSpan.innerHTML = $().jquery;
+
 		dojoXhr(0, 0, function(dojoXhrTime) {
 
 			var dojoSpan = document.getElementById('dojo');
 			dojoSpan.innerHTML = dojoXhrTime + ' ms';
-
-			var jqueryVersionSpan = document.getElementById('jqueryVersion');
-			jqueryVersionSpan.innerHTML = $().jquery;
 
 			jqueryXhr(0, 0, function(jqueryXhrTime) {
 				var jquerySpan = document.getElementById('jquery');
