@@ -5,8 +5,5 @@
     "dependencies": {
         "express": "latest"
     },
-    "version": "1.0",
-    "engines": {
-        "node": "latest"
-    }
+    "version": "1.0"
 }

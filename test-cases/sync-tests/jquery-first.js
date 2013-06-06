@@ -50,14 +50,14 @@ require([
 		var jqueryVersionSpan = document.getElementById('jqueryVersion');
 		jqueryVersionSpan.innerHTML = $().jquery;
 
-		dojoXhr(0, 0, function(dojoXhrTime) {
+		jqueryXhr(0, 0, function(jqueryXhrTime) {
+			var jquerySpan = document.getElementById('jquery');
+			jquerySpan.innerHTML = jqueryXhrTime + ' ms';
 
-			var dojoSpan = document.getElementById('dojo');
-			dojoSpan.innerHTML = dojoXhrTime + ' ms';
+			dojoXhr(0, 0, function(dojoXhrTime) {
 
-			jqueryXhr(0, 0, function(jqueryXhrTime) {
-				var jquerySpan = document.getElementById('jquery');
-				jquerySpan.innerHTML = jqueryXhrTime + ' ms';
+				var dojoSpan = document.getElementById('dojo');
+				dojoSpan.innerHTML = dojoXhrTime + ' ms';
 
 				var fastestSpan = document.getElementById('fastest');
 				fastestSpan.innerHTML = dojoXhrTime < jqueryXhrTime ? 'Dojo' : 'jQuery';
